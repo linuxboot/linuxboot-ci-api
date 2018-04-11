@@ -21,8 +21,8 @@ func Run(port int) {
 	s := &http.Server{
 		Addr:         fmt.Sprintf(":%d", port),
 		Handler:      api(),
-		ReadTimeout:  10 * time.Second,
-		WriteTimeout: 10 * time.Second,
+		ReadTimeout:  90 * time.Second,
+		WriteTimeout: 90 * time.Second,
 	}
 	s.ListenAndServe()
 }
